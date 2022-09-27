@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div class="authentication">
+                <div class="info">
+                    <p class="title">ورود کاربر</p>
+                    <p class="description">لطفا اطلاعات خود را وارد کنید</p>
+                </div>
+                <form action="">
+                    <div class="input-container">
+                        <label for="input-subscribe">
+                            <i class="fa-solid fa-users"></i>
+                        </label>
+                        <input id="input-subscribe" class="input subscribe" type="text"
+                            placeholder="شناسه اشتراک خود را وارد کنید ">
+                    </div>
+                    <div class="input-container">
+                        <label for="input-subscribe">
+                            <i class="fa-solid fa-user"></i>
+                        </label>
+                        <input class="input username" type="text" placeholder="نام کاربری خود را وارد کنید ">
+                    </div>
+                    <div class="input-container">
+                        <label for="input-subscribe">
+                            <i class="fas fa-lock"></i>
+                        </label>
+                        <input class="input password" type="password" placeholder="کلمه عبور خود را وارد کنید ">
+                    </div>
+                    <div class="input-container">
+                        <div class="captcha">
+                            This is Captcha
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <label for="input-subscribe">
+                            <i class="fa-solid fa-code"></i>
+                        </label>
+                        <input class="input secure-code" type="number" min="1000" max="9999"
+                            placeholder="کد امنیتی را وارد کنید  ">
+                    </div>
+                    <div class="input-container">
+                        <input class="submit-btn" type="submit" value="ورود">
+                        <a class="signup" href="#">ثبت نام</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="seperator"></div>
+        <div class="right-side">
+            <div class="image-container">
+                <div class="top-container">
+                    <img src="./img/PortalLogoName.png" alt="پورتال ذینفعان">
+                </div>
+                <div class="center-container">
+                    <img src="./img/Petro.png" alt="لوگوی شرکت">
+                </div>
+                <div class="bottom-container">
+                    <img src="./img/RSR.png" alt="الگوی رسام سیستم راهکاران">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
