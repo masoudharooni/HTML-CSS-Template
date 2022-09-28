@@ -1,0 +1,206 @@
+/* start general tags */
+@import 'reaset.css';
+
+@font-face {
+    font-family: 'SGKara';
+    src: url('../font/÷SGKara-Light.ttf');
+    src: url('../font/SGKara-Light.ttf?#iefix') format('embedded-opentype'),
+        url('../font/SGKara-Light.ttf') format('ttf'),
+        url('../font/SGKara-Light.ttf') format('ttf'),
+        url('../font/SGKara-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SGKara-bold';
+    src: url('../font/SGKara-SemiBold.ttf');
+    src: url('../font/SGKara-SemiBold.ttf?#iefix') format('embedded-opentype'),
+        url('../font/SGKara-SemiBold.ttf') format('ttf'),
+        url('../font/SGKara-SemiBold.ttf') format('ttf'),
+        url('../font/SGKara-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-display: swap;
+}
+
+::placeholder {
+    color: #001D4A;
+    opacity: 1;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    font-family: 'SGKara';
+    direction: rtl;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'SGKara';
+}
+
+input, button {
+    outline: none;
+    border: 0;
+    font-family: 'SGKara';
+}
+
+.clearfix {
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* end general tags */
+
+/* styles */
+.container {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: rgb(0, 29, 74);
+    background: linear-gradient(90deg, rgba(0, 29, 74, 1) 0%, rgba(30, 56, 97, 1) 50%, rgba(0, 29, 74, 1) 100%);
+}
+
+.real {
+    width: 100%;
+    height: 50%;
+    background-color: red;
+}
+
+.legal {
+    width: 100%;
+    height: 50%;
+    background-color: blue;
+}
+
+.right-side {
+    display: inline;
+    width: 33.3%;
+    height: 100%;
+    float: right;
+    background-color: red;
+}
+
+.center-side {
+    width: 33.3%;
+    height: 100%;
+    background-color: green;
+    display: inline-block;
+}
+
+.left-side {
+    width: 33.3%;
+    height: 100%;
+    float: left;
+    display: inline;
+    background-color: yellow;
+}
+
+
+
+
+.input-container {
+    position: relative;
+    width: 300px;
+    height: 70px;
+    margin: 15px auto;
+    text-align: center;
+}
+
+.input-container label {
+    background-color: #27476E;
+    text-align: right;
+    display: block;
+    float: right;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+    border-radius: 7px 7px 0 0;
+}
+
+.input-container label span {
+    font-size: 16px;
+    color: #EAF8BF;
+}
+
+.input {
+    width: 100%;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 0 0 7px 7px;
+    background-color: #EAF8BF;
+}
+
+
+/* user-type select styles */
+
+/*the container must be positioned relative:*/
+.custom-select {
+    position: relative;
+    width: 100%;
+    float: left;
+    color: #001D4A;
+}
+
+.custom-select select {
+    display: none;
+}
+
+.select-selected {
+    background-color: #EAF8BF;
+    border-radius: 3px;
+}
+
+.select-items div, .select-selected {
+    color: #001D4A;
+    font-family: 'SGKara';
+    padding: 10px 0;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+    text-align: right;
+}
+
+/*style items (options):*/
+.select-items {
+    position: absolute;
+    background-color: #EAF8BF;
+    border-radius: 0 0 7px 7px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    text-align: right;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* user-type select styles */
+
+
+/* styles */
