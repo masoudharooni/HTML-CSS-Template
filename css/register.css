@@ -80,13 +80,13 @@ input[type=number]::-webkit-inner-spin-button {
 .real {
     width: 100%;
     height: 50%;
-    background-color: red;
+    /* background-color: red; */
 }
 
 .legal {
     width: 100%;
     height: 50%;
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 .right-side {
@@ -94,13 +94,13 @@ input[type=number]::-webkit-inner-spin-button {
     width: 33.3%;
     height: 100%;
     float: right;
-    background-color: pink;
+    /* background-color: pink; */
 }
 
 .center-side {
     width: 33.3%;
     height: 100%;
-    background-color: green;
+    /* background-color: green; */
     display: inline-block;
 }
 
@@ -109,7 +109,7 @@ input[type=number]::-webkit-inner-spin-button {
     height: 100%;
     float: left;
     display: inline;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 
@@ -201,6 +201,31 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 /* user-type select styles */
+
+/* header styles */
+#header {
+    width: 100%;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    background-color: #27476E;
+    border-bottom: 2px solid #ECA400;
+    transition: .5s;
+}
+
+#header:hover {
+    transition: .5s;
+    border-bottom: 5px solid #ECA400;
+    cursor: pointer;
+}
+
+#header .header-info p {
+    font-size: 30px;
+    font-family: 'SGKara-bold';
+    color: #EAF8BF;
+}
+
+/* header styles */
+
 
 
 /* styles */
