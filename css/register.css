@@ -116,6 +116,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 
 .input-container {
+    /* background-color: blue; */
     position: relative;
     width: 300px;
     height: 70px;
@@ -133,6 +134,12 @@ input[type=number]::-webkit-inner-spin-button {
     position: relative;
     padding: 5px;
     border-radius: 7px 7px 0 0;
+    transition: .3s;
+}
+
+.input-container label:hover {
+    background-color: #365b88;
+    transition: .3s;
 }
 
 .input-container label span {
@@ -146,8 +153,13 @@ input[type=number]::-webkit-inner-spin-button {
     padding: 10px 20px;
     border-radius: 0 0 7px 7px;
     background-color: #EAF8BF;
+    transition: .3s;
 }
 
+.input:hover {
+    transition: .3s;
+    background-color: #e1ff89;
+}
 
 /* user-type select styles */
 
@@ -226,6 +238,38 @@ input[type=number]::-webkit-inner-spin-button {
 
 /* header styles */
 
+/* footer styles */
+#footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 40px 0;
+    background-color: #27476E;
+    text-align: left;
+}
 
+#footer .submit-btn {
+    width: 100%;
+    display: block;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: 2px solid #ECA400;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: SGKara;
+    color: #ECA400;
+    font-size: 20px;
+    background: none;
+    transition: .5s;
+}
+
+#footer .submit-btn:hover {
+    background-color: #ECA400;
+    color: #001D4A;
+    border-radius: 0;
+    transition: .5s;
+}
+
+/* footer styles */
 
 /* styles */
