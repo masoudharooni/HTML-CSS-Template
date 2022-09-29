@@ -1,0 +1,372 @@
+/* start general tags */
+@import 'reaset.css';
+
+@font-face {
+    font-family: 'SGKara';
+    src: url('../font/÷SGKara-Light.ttf');
+    src: url('../font/SGKara-Light.ttf?#iefix') format('embedded-opentype'),
+        url('../font/SGKara-Light.ttf') format('ttf'),
+        url('../font/SGKara-Light.ttf') format('ttf'),
+        url('../font/SGKara-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SGKara-bold';
+    src: url('../font/SGKara-SemiBold.ttf');
+    src: url('../font/SGKara-SemiBold.ttf?#iefix') format('embedded-opentype'),
+        url('../font/SGKara-SemiBold.ttf') format('ttf'),
+        url('../font/SGKara-SemiBold.ttf') format('ttf'),
+        url('../font/SGKara-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-display: swap;
+}
+
+::placeholder {
+    color: #001D4A;
+    opacity: 1;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+body {
+    font-family: 'SGKara';
+    direction: rtl;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'SGKara';
+}
+
+input, button {
+    outline: none;
+    border: 0;
+    font-family: 'SGKara';
+}
+
+.clearfix {
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* end general tags */
+
+/* styles */
+.container {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: rgb(0, 29, 74);
+    background: linear-gradient(90deg, rgba(0, 29, 74, 1) 0%, rgba(30, 56, 97, 1) 50%, rgba(0, 29, 74, 1) 100%);
+}
+
+
+.input-container {
+    position: relative;
+    width: 80%;
+    height: 70px;
+    margin: 10px auto;
+    display: block;
+}
+
+.input-container label {
+    background-color: #27476E;
+    text-align: right;
+    display: block;
+    float: right;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+    border-radius: 7px 7px 0 0;
+    transition: .3s;
+}
+
+.input-container label:hover {
+    background-color: #365b88;
+    transition: .3s;
+}
+
+.input-container label span {
+    font-size: 16px;
+    color: #EAF8BF;
+}
+
+.input {
+    width: 100%;
+    display: block;
+    padding: 5px 20px;
+    border-radius: 0 0 7px 7px;
+    background-color: #EAF8BF;
+    transition: .3s;
+}
+
+.input:hover {
+    transition: .3s;
+    background-color: #e1ff89;
+}
+
+/* user-type select styles */
+
+/*the container must be positioned relative:*/
+.custom-select {
+    position: relative;
+    width: 100%;
+    float: left;
+    color: #001D4A;
+}
+
+.custom-select select {
+    display: none;
+}
+
+.select-selected {
+    background-color: #EAF8BF;
+    border-radius: 3px;
+}
+
+.select-items div, .select-selected {
+    color: #001D4A;
+    font-family: 'SGKara';
+    padding: 10px 0;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+    text-align: right;
+}
+
+/*style items (options):*/
+.select-items {
+    position: absolute;
+    background-color: #EAF8BF;
+    border-radius: 0 0 7px 7px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    text-align: right;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* user-type select styles */
+
+/* header styles */
+#header {
+    width: 100%;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    background-color: #27476E;
+    border-bottom: 2px solid #ECA400;
+    transition: .5s;
+}
+
+#header:hover {
+    transition: .5s;
+    border-bottom: 5px solid #ECA400;
+    cursor: pointer;
+}
+
+#header .header-info p {
+    font-size: 30px;
+    font-family: 'SGKara-bold';
+    color: #EAF8BF;
+}
+
+/* header styles */
+
+/* footer styles */
+#footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 0px 0;
+    background-color: #27476E;
+    text-align: left;
+}
+
+#footer .submit-btn {
+    width: 100%;
+    display: block;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: 2px solid #ECA400;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: SGKara;
+    color: #ECA400;
+    font-size: 20px;
+    background: none;
+    transition: .5s;
+}
+
+#footer .submit-btn:hover {
+    background-color: #ECA400;
+    color: #001D4A;
+    border-radius: 0;
+    transition: .5s;
+}
+
+.container table {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+.container table tr {
+    background-color: #45658d;
+    color: #EAF8BF;
+}
+
+.container table tr:first-child {
+    background-color: #ECA400;
+    color: #001D4A;
+}
+
+.container table tr:not(:first-child):hover {
+    background-color: #45658da1;
+    cursor: pointer;
+}
+
+.container tr:nth-child(even) {
+    background-color: #45658da1;
+}
+
+.container table tr th {
+    padding: 15px 10px;
+    font-family: 'SGKara-bold';
+    cursor: pointer;
+}
+
+.container table td {
+    padding: 15px 10px;
+    color: #EAF8BF;
+}
+
+.container table i {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.container table tr:not(:last-child) {
+    border-bottom: 1px solid #0b2b53;
+}
+
+.container table .delete-icon {
+    color: red;
+}
+
+/* footer styles */
+
+/* modal styles */
+.modal-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #001e4a87;
+}
+
+.modal-container .address-form-container {
+    border-radius: 20px;
+    border: 5px solid #ECA400;
+    background-color: #006992;
+    width: 30%;
+    height: 65%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.left-side {
+    width: 50%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+.right-side {
+    width: 50%;
+    height: 100%;
+    float: right;
+    text-align: center;
+}
+
+
+.address-submit {
+    width: 30%;
+    background: none;
+    border-radius: 6px;
+    border: 2px solid #ECA400;
+    cursor: pointer;
+    color: #EAF8BF;
+    font-size: 55px;
+    font-family: 'SGKara-bold';
+    font-size: 15px;
+    padding: 6px 0;
+    transition: .5s;
+}
+
+.address-submit:hover {
+    background-color: #ECA400;
+    color: #001D4A;
+    transition: .5s;
+}
+
+.address-submit:active {
+    position: relative;
+    top: 1px;
+}
+
+.submit-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+}
+
+
+
+/* modal styles */
+
+
+/* styles */

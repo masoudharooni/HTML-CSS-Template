@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اطلاعات تکمیلی</title>
+    <link rel="stylesheet" href="./css/additional-registeration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+        integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <header id="header">
+            <div class="header-info">
+                <p>ثبت اطلاعات تکمیلی متقاضی</p>
+            </div>
+        </header>
+
+
+        <table>
+            <tr>
+                <th>آدرس ها</th>
+                <th id="address-icon" title="اضافه کردن">
+                    <i class="fas fa-plus"></i>
+                </th>
+            </tr>
+            <tr>
+                <td>آدرس</td>
+                <td class="delete-icon-container" title="پاک کردن">
+                    <i class=" fas fa-trash delete-icon"></i>
+                </td>
+            </tr>
+
+        </table>
+
+
+        <div class="let-side">
+            <footer id="footer">
+                <div class="left-side">
+                    <div class="input-container">
+                        <input class="submit-btn" type="submit" value="ورود">
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+
+
+
+        <div class="modal-container">
+            <div class="address-form-container">
+                <div class="right-side">
+
+
+                    <div class="input-container">
+                        <label for="title">
+                            <span> عنوان</span>
+                        </label>
+                        <input id="title" class="input" type="text" placeholder="عنوان را وارد کنید">
+                    </div>
+
+                    <div class="input-container">
+                        <label for="address">
+                            <span> آدرس</span>
+                        </label>
+                        <input id="address" class="input" type="text" placeholder="آدرس را وارد کنید">
+                    </div>
+
+                    <div class="input-container">
+                        <label for="telephone">
+                            <span> تلفن</span>
+                        </label>
+                        <input id="telephone" class="input" type="number" placeholder="تلفن را وارد کنید">
+                    </div>
+
+                    <div class="input-container">
+                        <label for="post-code">
+                            <span> کدپستی</span>
+                        </label>
+                        <input id="post-code" class="input" type="number" placeholder="کدپستی را وارد کنید">
+                    </div>
+                </div>
+
+                <div class="left-side">
+                    <div class="input-container">
+                        <label for="fax">
+                            <span> فاکس</span>
+                        </label>
+                        <input id="fax" class="input" type="number" placeholder="فاکس را وارد کنید">
+                    </div>
+
+                    <div class="input-container">
+                        <label for="email">
+                            <span> ایمیل</span>
+                        </label>
+                        <input id="email" class="input" type="email" placeholder="ایمیل را وارد کنید">
+                    </div>
+
+                    <div class="input-container">
+                        <label for="location">
+                            <span>منطقه جغرافیایی</span>
+                        </label>
+                        <div class="custom-select">
+                            <select id="location" class="input">
+                                <option value="1">اصفهان</option>
+                                <option value="2">نجف آباد</option>
+                                <option value="2">خمینی شهر </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="submit-container">
+                    <div class="left-side">
+                        <input type="submit" class="address-submit" value="تایید">
+                    </div>
+                    <div class="right-side">
+                        <input type="submit" class="address-submit cansell-button" value="انصراف">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#address-icon').click(function (e) {
+                e.preventDefault();
+                alert('salam');
+
+            });
+        });
+
+
+
+
+
+        // < !--user - type select script-- >
+        var x, i, j, l, ll, selElmnt, a, b, c;
+        x = document.getElementsByClassName("custom-select");
+        l = x.length;
+        for (i = 0; i < l; i++) {
+            selElmnt = x[i].getElementsByTagName("select")[0];
+            ll = selElmnt.length;
+            a = document.createElement("DIV");
+            a.setAttribute("class", "select-selected");
+            a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+            x[i].appendChild(a);
+            b = document.createElement("DIV");
+            b.setAttribute("class", "select-items select-hide");
+            for (j = 1; j < ll; j++) {
+                c = document.createElement("DIV");
+                c.innerHTML = selElmnt.options[j].innerHTML;
+                c.addEventListener("click", function (e) {
+                    var y, i, k, s, h, sl, yl;
+                    s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                    sl = s.length;
+                    h = this.parentNode.previousSibling;
+                    for (i = 0; i < sl; i++) {
+                        if (s.options[i].innerHTML == this.innerHTML) {
+                            s.selectedIndex = i;
+                            h.innerHTML = this.innerHTML;
+                            y = this.parentNode.getElementsByClassName("same-as-selected");
+                            yl = y.length;
+                            for (k = 0; k < yl; k++) {
+                                y[k].removeAttribute("class");
+                            }
+                            this.setAttribute("class", "same-as-selected");
+                            break;
+                        }
+                    }
+                    h.click();
+                });
+                b.appendChild(c);
+            }
+            x[i].appendChild(b);
+            a.addEventListener("click", function (e) {
+                e.stopPropagation();
+                closeAllSelect(this);
+                this.nextSibling.classList.toggle("select-hide");
+                this.classList.toggle("select-arrow-active");
+            });
+        }
+        function closeAllSelect(elmnt) {
+            var x, y, i, xl, yl, arrNo = [];
+            x = document.getElementsByClassName("select-items");
+            y = document.getElementsByClassName("select-selected");
+            xl = x.length;
+            yl = y.length;
+            for (i = 0; i < yl; i++) {
+                if (elmnt == y[i]) {
+                    arrNo.push(i)
+                } else {
+                    y[i].classList.remove("select-arrow-active");
+                }
+            }
+            for (i = 0; i < xl; i++) {
+                if (arrNo.indexOf(i)) {
+                    x[i].classList.add("select-hide");
+                }
+            }
+        }
+        /*if the user clicks anywhere outside the select box,
+        then close all select boxes:*/
+        document.addEventListener("click", closeAllSelect);
+    // user  type select script
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
