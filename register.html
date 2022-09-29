@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ثبت نام</title>
     <link rel="stylesheet" href="./css/register.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="plugin/Persian-Jalali-Calendar-Data-Picker-Plugin/dist/kamadatepicker.min.css">
+
 </head>
 
 <body>
@@ -22,7 +22,7 @@
         </header>
 
 
-
+        <!-- 
         <div class="real">
             <form action="">
                 <div class="right-side">
@@ -38,7 +38,7 @@
                         <label for="date_of_birthday">
                             <span>تاریخ تولد: </span>
                         </label>
-                        <input id="date_of_birthday" class="input" type="date">
+                        <input id="date_of_birthday" class="input">
                     </div>
                     <div class="input-container">
                         <label for="passport_number">
@@ -127,9 +127,9 @@
                     </footer>
                 </div>
             </form>
-        </div>
+        </div> -->
 
-        <!-- <div class="legal">
+        <div class="legal">
             <form action="">
                 <div class="right-side">
                     <div class="input-container">
@@ -163,7 +163,7 @@
                         <label for="date_of_registration">
                             <span>تاریخ ثبت: </span>
                         </label>
-                        <input id="date_of_registration" class="input" type="date">
+                        <input id="date_of_registration" class="input">
                     </div>
 
                 </div>
@@ -233,12 +233,18 @@
 
                 </div>
 
-                <footer id="footer">
-                    <input class="submit-btn" type="submit" value="ورود">
-                </footer>
+                <div class="let-side">
+                    <footer id="footer">
+                        <div class="left-side">
+                            <div class="input-container">
+                                <input class="submit-btn" type="submit" value="ورود">
+                            </div>
+                        </div>
+                    </footer>
+                </div>
 
             </form>
-        </div> -->
+        </div>
 
     </div>
 
@@ -331,7 +337,30 @@
     <!-- user-type select script -->
 
 
+    <!-- <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+        integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script> -->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="./plugin/Persian-Jalali-Calendar-Data-Picker-Plugin/dist/kamadatepicker.holidays.js"></script>
+    <script src="./plugin/Persian-Jalali-Calendar-Data-Picker-Plugin/dist/kamadatepicker.min.js"></script>
 
+
+    <script>
+        kamaDatepicker('date_of_birthday', {
+            forceFarsiDigits: true,
+            buttonsColor: "#ECA400",
+            markToday: true,
+            markHolidays: true,
+            placeholder: '1401/01/01'
+        });
+        kamaDatepicker('date_of_registration', {
+            forceFarsiDigits: true,
+            buttonsColor: "#ECA400",
+            markToday: true,
+            markHolidays: true,
+            placeholder: '1401/01/01'
+        });
+
+    </script>
 </body>
 
 </html>
