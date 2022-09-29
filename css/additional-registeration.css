@@ -291,6 +291,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 /* modal styles */
 .modal-container {
+    display: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -299,10 +300,22 @@ input[type=number]::-webkit-inner-spin-button {
     background-color: #001e4a87;
 }
 
+.modal-container .modal-header {
+    border-bottom: 3px solid #ECA400;
+    padding: 10px 15px;
+    
+}
+
+.modal-container .modal-header p {
+    color:#EAF8BF;
+    font-family: 'SGKara-bold';
+    font-size: 20px;
+}
+
 .modal-container .address-form-container {
     border-radius: 20px;
-    border: 5px solid #ECA400;
-    background-color: #006992;
+    border: 2px solid #ECA400;
+    background-color: #001D4A;
     width: 30%;
     height: 65%;
     position: absolute;
@@ -361,19 +374,21 @@ input[type=number]::-webkit-inner-spin-button {
     position: absolute;
     bottom: 0px;
     border-top: 3px solid #ECA400;
+    background-color: #001D4A;
     text-align: center;
+    border-radius: 0 0 20px 20px;
 }
 
 .modal-footer .address-submit {
     width: 60%;
-    margin: 0 17px;
-    float: right;
+    margin: 0 0 0 17px;
+    float: left;
 }
 
 .modal-footer .cansell-btn {
-    width: 25%;
-    margin: 0 0 0 17px;
-    float: left;
+    margin: 0 17px 0 0px;
+    width: 30%;
+    float: right;
 }
 
 .submit-container {
