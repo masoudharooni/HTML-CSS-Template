@@ -28,6 +28,9 @@
     opacity: 1;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
 
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -38,8 +41,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 body {
     font-family: 'SGKara';
     direction: rtl;
-    /* Hide scrollbars */
-    overflow: hidden;
 }
 
 * {
