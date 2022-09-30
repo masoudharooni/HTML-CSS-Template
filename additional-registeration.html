@@ -33,18 +33,17 @@
 
             <table id="address-table">
                 <tr>
-                    <th>ردیف</th>
+                    <th></th>
                     <th>عنوان</th>
+                    <th>منطقه جغرافیایی</th>
                     <th>آدرس</th>
                     <th>تلفن</th>
                     <th>کد پستی</th>
                     <th>فاکس</th>
                     <th>ایمیل</th>
-                    <th>منطقه جغرافیایی</th>
-                    <th title="اضافه کردن">
-                        
-                    </th>
+                    <th></th>
                 </tr>
+
 
             </table>
 
@@ -251,22 +250,43 @@
                 let formData = form.serializeArray();
                 $(`
                     <tr>
-                        <td>${currentRow}</td>
+                        <td data-rowId="${currentRow}"></td>
                         <td>${formData[0]['value']}</td>
+                        <td>${formData[6]['value']}</td>
                         <td>${formData[1]['value']}</td>
                         <td>${formData[2]['value']}</td>
                         <td>${formData[3]['value']}</td>
                         <td>${formData[4]['value']}</td>
                         <td>${formData[5]['value']}</td>
-                        <td>${formData[6]['value']}</td>
                         <td class="delete-icon-container" title="پاک کردن">
-                            <i class=" fas fa-trash delete-icon"></i>
+                            <i data-deleteId="${currentRow}" class="fas fa-trash delete-icon  delete-address-icon"></i>
                         </td>
                     </tr>
                 `).appendTo('table#address-table');
                 $('#address-modal').css('display', 'none');
                 // English numbers to Persian
                 traverse(document.body);
+
+
+                // remove address
+                $('.delete-address-icon').click(function (e) {
+                    const id = $(this).attr('data-deleteId');
+                    deleteRow('address-table', id);
+                });
+                function deleteRow(tableId, expectedId) {
+                    let tableRows = document.getElementById(tableId).rows;
+                    for (let index = 1; index < tableRows.length; index++) {
+                        let row = tableRows[index];
+                        let rowId = row.querySelector('td').getAttribute('data-rowId');
+                        if (rowId == expectedId) {
+                            row.remove();
+                        }
+                    }
+                }
+                // remove address
+
+
+
             });
         });
 
