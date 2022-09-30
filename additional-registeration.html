@@ -11,8 +11,8 @@
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
-        integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="plugin/Persian-Jalali-Calendar-Data-Picker-Plugin/dist/kamadatepicker.min.css">
+
 </head>
 
 <body>
@@ -48,6 +48,34 @@
             </table>
 
         </div>
+
+        <div class="table-container">
+            <p class="table-title">افراد مرتبط</p>
+            <span class="table-icon">
+                <i id="other-people-save-icon" class="fas fa-floppy-disk" aria-hidden="true"></i>
+                <i id="other-people-plus-icon" class="fas fa-plus"></i>
+            </span>
+
+            <table id="other-people-table">
+                <tr>
+                    <th></th>
+                    <th>عنوان</th>
+                    <th>نام</th>
+                    <th>نام خانوادگی</th>
+                    <th>کدملی</th>
+                    <th>شماره تلفن همراه</th>
+                    <th>نام پدر</th>
+                    <th>تاریخ</th>
+                    <th>شماره شناسنامه</th>
+                    <th>تحصیلات</th>
+                    <th>شغل</th>
+                    <th>توضیحات</th>
+                    <th></th>
+                </tr>
+            </table>
+
+        </div>
+
         <div class="let-side">
             <footer id="footer">
                 <div class="left-side">
@@ -60,7 +88,7 @@
 
 
 
-
+        <!-- address modal container -->
         <div id="address-modal" class="modal-container">
             <div class="address-form-container">
 
@@ -133,6 +161,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="clearfix"></div>
                     <div class="modal-footer">
                         <div class="submit-container">
                             <input id="address-cansell-btn" type="button" class="modal-btn cansell-btn" value="انصراف">
@@ -143,14 +172,154 @@
                 </form>
             </div>
         </div>
+        <!-- address modal container -->
 
 
+
+        <!-- other people modal container -->
+        <div id="other-people-modal" class="modal-container">
+            <div class="address-form-container">
+
+                <div class="modal-header">
+                    <p>افراد مرتبط</p>
+                </div>
+
+                <form id="other-people-form" action="" method="post">
+                    <div class="right-side">
+
+                        <div class="input-container">
+                            <label for="name">
+                                <span> نام </span>
+                            </label>
+                            <input id="name" class="input" name="name" type="text" placeholder="نام را وارد کنید"
+                                required>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="national_code">
+                                <span> کد ملی</span>
+                            </label>
+                            <input id="national_code" class="input" name="national_code" type="number"
+                                placeholder="کد ملی را وارد کنید" required>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="father_name">
+                                <span> نام پدر</span>
+                            </label>
+                            <input id="father_name" class="input" name="father_name" type="number"
+                                placeholder="نام پدر را وارد کنید" required>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="job">
+                                <span> شغل</span>
+                            </label>
+                            <input id="job" class="input" name="job" type="number" placeholder="شغل را وارد کنید"
+                                required>
+                        </div>
+
+
+                        <div class="input-container">
+                            <label for="date_of_birthday">
+                                <span>تاریخ تولد: </span>
+                            </label>
+                            <input id="date_of_birthday" class="input" required>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="education">
+                                <span>تحصیلات</span>
+                            </label>
+                            <div class="custom-select">
+                                <select id="education" name="education" class="input" required>
+                                    <option value="دیپلم">دیپلم</option>
+                                    <option value="کاردانی">کاردانی</option>
+                                    <option value="کارشناسی">کارشناسی </option>
+                                    <option value="کارشناسی ارشد">کارشناسی ارشد </option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="left-side">
+
+                        <div class="input-container">
+                            <label for="family_name">
+                                <span> نام خانوادگی</span>
+                            </label>
+                            <input id="family_name" class="input" name="family_name" type="text"
+                                placeholder="نام خانوادگی را وارد کنید" required>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="id_code">
+                                <span> شماره شناسنامه</span>
+                            </label>
+                            <input id="id_code" class="input" name="id_code" type="number"
+                                placeholder="شماره شناسنامه را وارد کنید" required>
+                        </div>
+
+
+
+                        <div class="input-container">
+                            <label for="phone_number">
+                                <span> شماره تلفن همراه</span>
+                            </label>
+                            <input id="phone_number" class="input" name="phone_number" type="number"
+                                placeholder="شماره تلفن همراه را وارد کنید" required>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="description">
+                                <span> توضیحات</span>
+                            </label>
+                            <input id="description" class="input" name="description" type="number"
+                                placeholder="توضیحات را وارد کنید" required>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="title">
+                                <span>عنوان</span>
+                            </label>
+                            <div class="custom-select">
+                                <select id="title" name="title" class="input" required>
+                                    <option value="مدیر عامل">مدیر عامل</option>
+                                    <option value="پدر">پدر</option>
+                                    <option value="مادر">مادر </option>
+                                </select>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="modal-footer">
+                        <div class="submit-container">
+                            <input id="other-people-cansell-btn" type="button" class="modal-btn cansell-btn"
+                                value="انصراف">
+                            <input id="addredss-submit-btn" type="submit" class="modal-btn address-submit"
+                                value="تایید">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- other people modal container -->
 
 
 
     </div>
 
-
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="./plugin/Persian-Jalali-Calendar-Data-Picker-Plugin/dist/kamadatepicker.holidays.js"></script>
+    <script src="./plugin/Persian-Jalali-Calendar-Data-Picker-Plugin/dist/kamadatepicker.min.js"></script>
     <script>
 
         $(document).ready(function () {
@@ -228,7 +397,7 @@
 
 
 
-
+            // address modal
             $('#address-plus-icon').click(function (e) {
                 $('#address-modal').css('display', 'block');
             });
@@ -289,6 +458,71 @@
 
             });
         });
+        // address modal
+
+
+
+        // other people modal
+        $('#other-people-plus-icon').click(function (e) {
+            $('.modal-container').css('display', 'block');
+        });
+
+        $('#other-people-cansell-btn').click(function (e) {
+            $('.modal-container').css('display', 'none');
+        });
+
+        $('#other-people-save-icon').click(function (e) {
+            alert("سیو شد");
+        });
+
+        $('form#other-people-form').submit(function (e) {
+            e.preventDefault();
+            let countOfRows = document.getElementById('address-table').rows.length;
+            let currentRow = countOfRows++;
+            const form = $('form#address-form');
+            let formData = form.serializeArray();
+            $(`
+                    <tr>
+                        <td data-rowId="${currentRow}"></td>
+                        <td>${formData[0]['value']}</td>
+                        <td>${formData[6]['value']}</td>
+                        <td>${formData[1]['value']}</td>
+                        <td>${formData[2]['value']}</td>
+                        <td>${formData[3]['value']}</td>
+                        <td>${formData[4]['value']}</td>
+                        <td>${formData[5]['value']}</td>
+                        <td class="delete-icon-container" title="پاک کردن">
+                            <i data-deleteId="${currentRow}" class="fas fa-trash delete-icon  delete-address-icon"></i>
+                        </td>
+                    </tr>
+                `).appendTo('table#address-table');
+            $('#address-modal').css('display', 'none');
+            // English numbers to Persian
+            traverse(document.body);
+
+
+            // remove address
+            $('.delete-address-icon').click(function (e) {
+                const id = $(this).attr('data-deleteId');
+                deleteRow('address-table', id);
+            });
+            function deleteRow(tableId, expectedId) {
+                let tableRows = document.getElementById(tableId).rows;
+                for (let index = 1; index < tableRows.length; index++) {
+                    let row = tableRows[index];
+                    let rowId = row.querySelector('td').getAttribute('data-rowId');
+                    if (rowId == expectedId) {
+                        row.remove();
+                    }
+                }
+            }
+            // remove address
+
+
+
+        });
+
+        // other people modal
 
 
         // convertion english numbers to persian
@@ -306,6 +540,26 @@
             }
         }
         // convertion english numbers to persian
+
+
+        // persian date Picker
+        kamaDatepicker('date_of_birthday', {
+            forceFarsiDigits: true,
+            buttonsColor: "#ECA400",
+            markToday: true,
+            markHolidays: true,
+            placeholder: '1401/01/01'
+        });
+        kamaDatepicker('date_of_registration', {
+            forceFarsiDigits: true,
+            buttonsColor: "#ECA400",
+            markToday: true,
+            markHolidays: true,
+            placeholder: '1401/01/01'
+        });
+
+
+    // persian date Picker
 
 
     </script>

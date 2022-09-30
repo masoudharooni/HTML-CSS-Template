@@ -247,9 +247,8 @@ input[type=number]::-webkit-inner-spin-button {
 /* footer styles */
 #footer {
     width: 100%;
-    position: fixed;
+    position: absolute;
     bottom: 0;
-    padding: 40px 0;
     background-color: #27476E;
     text-align: left;
 }
@@ -261,11 +260,16 @@ input[type=number]::-webkit-inner-spin-button {
     border-radius: 10px;
     border: 2px solid #ECA400;
     cursor: pointer;
-    font-weight: bold;
-    font-family: SGKara;
+    font-family: 'SGKara-bold';
     color: #ECA400;
     font-size: 20px;
     background: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10px;
+    bottom: 10px;
+    margin: auto;
     transition: .5s;
 }
 
