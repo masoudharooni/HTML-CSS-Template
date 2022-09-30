@@ -39,6 +39,7 @@ $(document).ready(function () {
             </tr>
         `).appendTo('table#other-people-table');
         $('#other-people-modal').css('display', 'none');
+        clearFormInputs(form);
         // English numbers to Persian
         traverse(document.body);
 
@@ -57,6 +58,9 @@ $(document).ready(function () {
                     row.remove();
                 }
             }
+        }
+        function clearFormInputs(form) {
+            form.find("input[type=text], input[type=number],input[type=email]").val("");
         }
     });
     // convertion english numbers to persian
