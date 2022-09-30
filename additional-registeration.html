@@ -59,17 +59,17 @@
             <table id="other-people-table">
                 <tr>
                     <th></th>
-                    <th>عنوان</th>
                     <th>نام</th>
-                    <th>نام خانوادگی</th>
                     <th>کدملی</th>
-                    <th>شماره تلفن همراه</th>
                     <th>نام پدر</th>
-                    <th>تاریخ</th>
-                    <th>شماره شناسنامه</th>
-                    <th>تحصیلات</th>
                     <th>شغل</th>
+                    <th>تاریخ تولد</th>
+                    <th>تحصیلات</th>
+                    <th>نام خانوادگی</th>
+                    <th>شماره شناسنامه</th>
+                    <th>شماره تلفن همراه</th>
                     <th>توضیحات</th>
+                    <th>عنوان</th>
                     <th></th>
                 </tr>
             </table>
@@ -207,7 +207,7 @@
                             <label for="father_name">
                                 <span> نام پدر</span>
                             </label>
-                            <input id="father_name" class="input" name="father_name" type="number"
+                            <input id="father_name" class="input" name="father_name" type="text"
                                 placeholder="نام پدر را وارد کنید" required>
                         </div>
 
@@ -215,7 +215,7 @@
                             <label for="job">
                                 <span> شغل</span>
                             </label>
-                            <input id="job" class="input" name="job" type="number" placeholder="شغل را وارد کنید"
+                            <input id="job" class="input" name="job" type="text" placeholder="شغل را وارد کنید"
                                 required>
                         </div>
 
@@ -224,7 +224,7 @@
                             <label for="date_of_birthday">
                                 <span>تاریخ تولد: </span>
                             </label>
-                            <input id="date_of_birthday" class="input" required>
+                            <input id="date_of_birthday" name="date_of_birthday" class="input" required>
                         </div>
 
                         <div class="input-container">
@@ -275,7 +275,7 @@
                             <label for="description">
                                 <span> توضیحات</span>
                             </label>
-                            <input id="description" class="input" name="description" type="number"
+                            <input id="description" class="input" name="description" type="text"
                                 placeholder="توضیحات را وارد کنید" required>
                         </div>
 
@@ -317,252 +317,14 @@
 
     </div>
 
-    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+        integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
     <script src="./plugin/Persian-Jalali-Calendar-Data-Picker-Plugin/dist/kamadatepicker.holidays.js"></script>
     <script src="./plugin/Persian-Jalali-Calendar-Data-Picker-Plugin/dist/kamadatepicker.min.js"></script>
-    <script>
-
-        $(document).ready(function () {
-
-
-            // < !--user - type select script-- >
-            var x, i, j, l, ll, selElmnt, a, b, c;
-            x = document.getElementsByClassName("custom-select");
-            l = x.length;
-            for (i = 0; i < l; i++) {
-                selElmnt = x[i].getElementsByTagName("select")[0];
-                ll = selElmnt.length;
-                a = document.createElement("DIV");
-                a.setAttribute("class", "select-selected");
-                a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-                x[i].appendChild(a);
-                b = document.createElement("DIV");
-                b.setAttribute("class", "select-items select-hide");
-                for (j = 1; j < ll; j++) {
-                    c = document.createElement("DIV");
-                    c.innerHTML = selElmnt.options[j].innerHTML;
-                    c.addEventListener("click", function (e) {
-                        var y, i, k, s, h, sl, yl;
-                        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-                        sl = s.length;
-                        h = this.parentNode.previousSibling;
-                        for (i = 0; i < sl; i++) {
-                            if (s.options[i].innerHTML == this.innerHTML) {
-                                s.selectedIndex = i;
-                                h.innerHTML = this.innerHTML;
-                                y = this.parentNode.getElementsByClassName("same-as-selected");
-                                yl = y.length;
-                                for (k = 0; k < yl; k++) {
-                                    y[k].removeAttribute("class");
-                                }
-                                this.setAttribute("class", "same-as-selected");
-                                break;
-                            }
-                        }
-                        h.click();
-                    });
-                    b.appendChild(c);
-                }
-                x[i].appendChild(b);
-                a.addEventListener("click", function (e) {
-                    e.stopPropagation();
-                    closeAllSelect(this);
-                    this.nextSibling.classList.toggle("select-hide");
-                    this.classList.toggle("select-arrow-active");
-                });
-            }
-            function closeAllSelect(elmnt) {
-                var x, y, i, xl, yl, arrNo = [];
-                x = document.getElementsByClassName("select-items");
-                y = document.getElementsByClassName("select-selected");
-                xl = x.length;
-                yl = y.length;
-                for (i = 0; i < yl; i++) {
-                    if (elmnt == y[i]) {
-                        arrNo.push(i)
-                    } else {
-                        y[i].classList.remove("select-arrow-active");
-                    }
-                }
-                for (i = 0; i < xl; i++) {
-                    if (arrNo.indexOf(i)) {
-                        x[i].classList.add("select-hide");
-                    }
-                }
-            }
-            /*if the user clicks anywhere outside the select box,
-            then close all select boxes:*/
-            document.addEventListener("click", closeAllSelect);
-            // user  type select script
-
-
-
-            // address modal
-            $('#address-plus-icon').click(function (e) {
-                $('#address-modal').css('display', 'block');
-            });
-
-            $('#address-cansell-btn').click(function (e) {
-
-                $('#address-modal').css('display', 'none');
-            });
-
-            $('#address-save-icon').click(function (e) {
-                alert("سیو شد");
-            });
-
-            $('form#address-form').submit(function (e) {
-                e.preventDefault();
-                let countOfRows = document.getElementById('address-table').rows.length;
-                let currentRow = countOfRows++;
-                const form = $('form#address-form');
-                let formData = form.serializeArray();
-                $(`
-                    <tr>
-                        <td data-rowId="${currentRow}"></td>
-                        <td>${formData[0]['value']}</td>
-                        <td>${formData[6]['value']}</td>
-                        <td>${formData[1]['value']}</td>
-                        <td>${formData[2]['value']}</td>
-                        <td>${formData[3]['value']}</td>
-                        <td>${formData[4]['value']}</td>
-                        <td>${formData[5]['value']}</td>
-                        <td class="delete-icon-container" title="پاک کردن">
-                            <i data-deleteId="${currentRow}" class="fas fa-trash delete-icon  delete-address-icon"></i>
-                        </td>
-                    </tr>
-                `).appendTo('table#address-table');
-                $('#address-modal').css('display', 'none');
-                // English numbers to Persian
-                traverse(document.body);
-
-
-                // remove address
-                $('.delete-address-icon').click(function (e) {
-                    const id = $(this).attr('data-deleteId');
-                    deleteRow('address-table', id);
-                });
-                function deleteRow(tableId, expectedId) {
-                    let tableRows = document.getElementById(tableId).rows;
-                    for (let index = 1; index < tableRows.length; index++) {
-                        let row = tableRows[index];
-                        let rowId = row.querySelector('td').getAttribute('data-rowId');
-                        if (rowId == expectedId) {
-                            row.remove();
-                        }
-                    }
-                }
-                // remove address
-
-
-
-            });
-        });
-        // address modal
-
-
-
-        // other people modal
-        $('#other-people-plus-icon').click(function (e) {
-            $('.modal-container').css('display', 'block');
-        });
-
-        $('#other-people-cansell-btn').click(function (e) {
-            $('.modal-container').css('display', 'none');
-        });
-
-        $('#other-people-save-icon').click(function (e) {
-            alert("سیو شد");
-        });
-
-        $('form#other-people-form').submit(function (e) {
-            e.preventDefault();
-            let countOfRows = document.getElementById('address-table').rows.length;
-            let currentRow = countOfRows++;
-            const form = $('form#address-form');
-            let formData = form.serializeArray();
-            $(`
-                    <tr>
-                        <td data-rowId="${currentRow}"></td>
-                        <td>${formData[0]['value']}</td>
-                        <td>${formData[6]['value']}</td>
-                        <td>${formData[1]['value']}</td>
-                        <td>${formData[2]['value']}</td>
-                        <td>${formData[3]['value']}</td>
-                        <td>${formData[4]['value']}</td>
-                        <td>${formData[5]['value']}</td>
-                        <td class="delete-icon-container" title="پاک کردن">
-                            <i data-deleteId="${currentRow}" class="fas fa-trash delete-icon  delete-address-icon"></i>
-                        </td>
-                    </tr>
-                `).appendTo('table#address-table');
-            $('#address-modal').css('display', 'none');
-            // English numbers to Persian
-            traverse(document.body);
-
-
-            // remove address
-            $('.delete-address-icon').click(function (e) {
-                const id = $(this).attr('data-deleteId');
-                deleteRow('address-table', id);
-            });
-            function deleteRow(tableId, expectedId) {
-                let tableRows = document.getElementById(tableId).rows;
-                for (let index = 1; index < tableRows.length; index++) {
-                    let row = tableRows[index];
-                    let rowId = row.querySelector('td').getAttribute('data-rowId');
-                    if (rowId == expectedId) {
-                        row.remove();
-                    }
-                }
-            }
-            // remove address
-
-
-
-        });
-
-        // other people modal
-
-
-        // convertion english numbers to persian
-        persian = { 0: '۰', 1: '۱', 2: '۲', 3: '۳', 4: '۴', 5: '۵', 6: '۶', 7: '۷', 8: '۸', 9: '۹' };
-        function traverse(el) {
-            if (el.nodeType == 3) {
-                var list = el.data.match(/[0-9]/g);
-                if (list != null && list.length != 0) {
-                    for (var i = 0; i < list.length; i++)
-                        el.data = el.data.replace(list[i], persian[list[i]]);
-                }
-            }
-            for (var i = 0; i < el.childNodes.length; i++) {
-                traverse(el.childNodes[i]);
-            }
-        }
-        // convertion english numbers to persian
-
-
-        // persian date Picker
-        kamaDatepicker('date_of_birthday', {
-            forceFarsiDigits: true,
-            buttonsColor: "#ECA400",
-            markToday: true,
-            markHolidays: true,
-            placeholder: '1401/01/01'
-        });
-        kamaDatepicker('date_of_registration', {
-            forceFarsiDigits: true,
-            buttonsColor: "#ECA400",
-            markToday: true,
-            markHolidays: true,
-            placeholder: '1401/01/01'
-        });
-
-
-    // persian date Picker
-
-
-    </script>
+    <script src="./js/additional_registration/other_people_modal.js"></script>
+    <script src="./js/additional_registration/address_modal.js"></script>
+    <script src="./js/select_drop_down_script.js"></script>
+    <script src="./js/persian_date_picker.js"></script>
 
 </body>
 
