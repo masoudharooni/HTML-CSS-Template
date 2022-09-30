@@ -1,71 +1,6 @@
-/* start general tags */
 @import 'reaset.css';
+@import 'general.css';
 
-@font-face {
-    font-family: 'SGKara';
-    src: url('../font/÷SGKara-Light.ttf');
-    src: url('../font/SGKara-Light.ttf?#iefix') format('embedded-opentype'), url('../font/SGKara-Light.ttf') format('ttf'), url('../font/SGKara-Light.ttf') format('ttf'), url('../font/SGKara-Light.ttf') format('truetype');
-    font-weight: normal;
-    font-display: swap;
-}
-
-html, body {
-    height: 100%;
-    width: 100%;
-}
-
-::placeholder {
-    color: #001D4A;
-    opacity: 1;
-}
-
-::-webkit-scrollbar {
-    width: 0;
-}
-
-body {
-    font-family: 'SGKara';
-    direction: rtl;
-}
-
-* {
-    box-sizing: border-box;
-    font-family: 'SGKara';
-}
-
-input, button {
-    font-family: 'SGKara';
-    outline: none;
-    border: 0;
-}
-
-.clearfix {
-    clear: both;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:focus {
-    outline: none;
-}
-
-
-input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
-
-/* end general tags */
-
-/* styles */
-.container {
-    height: 100%;
-    width: 100%;
-    background: rgb(0, 29, 74);
-    background: linear-gradient(90deg, rgba(0, 29, 74, 1) 0%, rgba(30, 56, 97, 1) 50%, rgba(0, 29, 74, 1) 100%);
-    position: relative;
-}
 
 .left-side {
     position: absolute;
@@ -73,7 +8,6 @@ input[type=number]::-webkit-inner-spin-button {
     top: 0;
     height: 100%;
     width: 50%;
-    /* border-right: 1px solid wheat; */
 }
 
 .authentication, .image-container {

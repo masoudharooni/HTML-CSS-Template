@@ -242,7 +242,7 @@ input[type=number]::-webkit-inner-spin-button {
     color: #001D4A;
     border-radius: 0;
     transition: .5s;
-}   
+}
 
 .container table {
     text-align: center;
@@ -401,7 +401,6 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .submit-container {
-    height: 30px;
     position: absolute;
     left: 0;
     right: 0;
