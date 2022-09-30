@@ -26,10 +26,14 @@
 
         <div class="table-container">
             <p class="table-title">آدرس</p>
-            <span id="address-icon" class="table-icon"><i class="fas fa-plus"></i></span>
+            <span class="table-icon">
+                <i id="address-save-icon" class="fas fa-floppy-disk" aria-hidden="true"></i>
+                <i id="address-plus-icon" class="fas fa-plus"></i>
+            </span>
 
-            <table>
+            <table id="address-table">
                 <tr>
+                    <th>ردیف</th>
                     <th>عنوان</th>
                     <th>آدرس</th>
                     <th>تلفن</th>
@@ -38,86 +42,8 @@
                     <th>ایمیل</th>
                     <th>منطقه جغرافیایی</th>
                     <th title="اضافه کردن">
-
+                        
                     </th>
-                </tr>
-
-                <tr>
-                    <td>شرکت</td>
-                    <td>اصفهان / اصفهان</td>
-                    <td>098763241234</td>
-                    <td>098763241234</td>
-                    <td>098763241234</td>
-                    <td>masoudharooni@gmail.com</td>
-                    <td>اصفهان خمینی شهر</td>
-                    <td class="delete-icon-container" title="پاک کردن">
-                        <i class=" fas fa-trash delete-icon"></i>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>شرکت</td>
-                    <td>اصفهان / اصفهان</td>
-                    <td>098763241234</td>
-                    <td>098763241234</td>
-                    <td>098763241234</td>
-                    <td>masoudharooni@gmail.com</td>
-                    <td>اصفهان خمینی شهر</td>
-                    <td class="delete-icon-container" title="پاک کردن">
-                        <i class=" fas fa-trash delete-icon"></i>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>شرکت</td>
-                    <td>اصفهان / اصفهان</td>
-                    <td>098763241234</td>
-                    <td>098763241234</td>
-                    <td>098763241234</td>
-                    <td>masoudharooni@gmail.com</td>
-                    <td>اصفهان خمینی شهر</td>
-                    <td class="delete-icon-container" title="پاک کردن">
-                        <i class=" fas fa-trash delete-icon"></i>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>شرکت</td>
-                    <td>اصفهان / اصفهان</td>
-                    <td>098763241234</td>
-                    <td>098763241234</td>
-                    <td>098763241234</td>
-                    <td>masoudharooni@gmail.com</td>
-                    <td>اصفهان خمینی شهر</td>
-                    <td class="delete-icon-container" title="پاک کردن">
-                        <i class=" fas fa-trash delete-icon"></i>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>شرکت</td>
-                    <td>اصفهان / اصفهان</td>
-                    <td>098763241234</td>
-                    <td>098763241234</td>
-                    <td>098763241234</td>
-                    <td>masoudharooni@gmail.com</td>
-                    <td>اصفهان خمینی شهر</td>
-                    <td class="delete-icon-container" title="پاک کردن">
-                        <i class=" fas fa-trash delete-icon"></i>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>شرکت</td>
-                    <td>اصفهان / اصفهان</td>
-                    <td>098763241234</td>
-                    <td>098763241234</td>
-                    <td>098763241234</td>
-                    <td>masoudharooni@gmail.com</td>
-                    <td>اصفهان خمینی شهر</td>
-                    <td class="delete-icon-container" title="پاک کردن">
-                        <i class=" fas fa-trash delete-icon"></i>
-                    </td>
                 </tr>
 
             </table>
@@ -143,71 +69,79 @@
                     <p>آدرس</p>
                 </div>
 
-                <div class="right-side">
-                    <div class="input-container">
-                        <label for="title">
-                            <span> عنوان</span>
-                        </label>
-                        <input id="title" class="input" type="text" placeholder="عنوان را وارد کنید">
-                    </div>
+                <form id="address-form" action="" method="post">
+                    <div class="right-side">
+                        <div class="input-container">
+                            <label for="title">
+                                <span> عنوان</span>
+                            </label>
+                            <input id="title" class="input" name="title" type="text" placeholder="عنوان را وارد کنید"
+                                required>
+                        </div>
 
-                    <div class="input-container">
-                        <label for="address">
-                            <span> آدرس</span>
-                        </label>
-                        <input id="address" class="input" type="text" placeholder="آدرس را وارد کنید">
-                    </div>
+                        <div class="input-container">
+                            <label for="address">
+                                <span> آدرس</span>
+                            </label>
+                            <input id="address" class="input" name="address" type="text" placeholder="آدرس را وارد کنید"
+                                required>
+                        </div>
 
-                    <div class="input-container">
-                        <label for="telephone">
-                            <span> تلفن</span>
-                        </label>
-                        <input id="telephone" class="input" type="number" placeholder="تلفن را وارد کنید">
-                    </div>
+                        <div class="input-container">
+                            <label for="telephone">
+                                <span> تلفن</span>
+                            </label>
+                            <input id="telephone" class="input" name="telephone" type="number"
+                                placeholder="تلفن را وارد کنید" required>
+                        </div>
 
-                    <div class="input-container">
-                        <label for="post-code">
-                            <span> کدپستی</span>
-                        </label>
-                        <input id="post-code" class="input" type="number" placeholder="کدپستی را وارد کنید">
-                    </div>
-                </div>
-
-                <div class="left-side">
-                    <div class="input-container">
-                        <label for="fax">
-                            <span> فاکس</span>
-                        </label>
-                        <input id="fax" class="input" type="number" placeholder="فاکس را وارد کنید">
-                    </div>
-
-                    <div class="input-container">
-                        <label for="email">
-                            <span> ایمیل</span>
-                        </label>
-                        <input id="email" class="input" type="email" placeholder="ایمیل را وارد کنید">
-                    </div>
-
-                    <div class="input-container">
-                        <label for="location">
-                            <span>منطقه جغرافیایی</span>
-                        </label>
-                        <div class="custom-select">
-                            <select id="location" class="input">
-                                <option value="1">اصفهان</option>
-                                <option value="2">نجف آباد</option>
-                                <option value="2">خمینی شهر </option>
-                            </select>
+                        <div class="input-container">
+                            <label for="post-code">
+                                <span> کدپستی</span>
+                            </label>
+                            <input id="post-code" class="input" name="post-code" type="number"
+                                placeholder="کدپستی را وارد کنید" required>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <div class="submit-container">
-                        <input id="address-cansell-btn" type="submit" class="modal-btn cansell-btn" value="انصراف">
-                        <input type="submit" class="modal-btn address-submit" value="تایید">
-                    </div>
-                </div>
 
+                    <div class="left-side">
+                        <div class="input-container">
+                            <label for="fax">
+                                <span> فاکس</span>
+                            </label>
+                            <input id="fax" class="input" name="fax" type="number" placeholder="فاکس را وارد کنید"
+                                required>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="email">
+                                <span> ایمیل</span>
+                            </label>
+                            <input id="email" class="input" name="email" type="email" placeholder="ایمیل را وارد کنید"
+                                required>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="location">
+                                <span>منطقه جغرافیایی</span>
+                            </label>
+                            <div class="custom-select">
+                                <select id="location" name="location" class="input" required>
+                                    <option value="اصفهان">اصفهان</option>
+                                    <option value="نجف آباد">نجف آباد</option>
+                                    <option value="خمینی شهر">خمینی شهر </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="submit-container">
+                            <input id="address-cansell-btn" type="button" class="modal-btn cansell-btn" value="انصراف">
+                            <input id="addredss-submit-btn" type="submit" class="modal-btn address-submit"
+                                value="تایید">
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
 
@@ -219,8 +153,84 @@
 
 
     <script>
+
         $(document).ready(function () {
-            $('#address-icon').click(function (e) {
+
+
+            // < !--user - type select script-- >
+            var x, i, j, l, ll, selElmnt, a, b, c;
+            x = document.getElementsByClassName("custom-select");
+            l = x.length;
+            for (i = 0; i < l; i++) {
+                selElmnt = x[i].getElementsByTagName("select")[0];
+                ll = selElmnt.length;
+                a = document.createElement("DIV");
+                a.setAttribute("class", "select-selected");
+                a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+                x[i].appendChild(a);
+                b = document.createElement("DIV");
+                b.setAttribute("class", "select-items select-hide");
+                for (j = 1; j < ll; j++) {
+                    c = document.createElement("DIV");
+                    c.innerHTML = selElmnt.options[j].innerHTML;
+                    c.addEventListener("click", function (e) {
+                        var y, i, k, s, h, sl, yl;
+                        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                        sl = s.length;
+                        h = this.parentNode.previousSibling;
+                        for (i = 0; i < sl; i++) {
+                            if (s.options[i].innerHTML == this.innerHTML) {
+                                s.selectedIndex = i;
+                                h.innerHTML = this.innerHTML;
+                                y = this.parentNode.getElementsByClassName("same-as-selected");
+                                yl = y.length;
+                                for (k = 0; k < yl; k++) {
+                                    y[k].removeAttribute("class");
+                                }
+                                this.setAttribute("class", "same-as-selected");
+                                break;
+                            }
+                        }
+                        h.click();
+                    });
+                    b.appendChild(c);
+                }
+                x[i].appendChild(b);
+                a.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    closeAllSelect(this);
+                    this.nextSibling.classList.toggle("select-hide");
+                    this.classList.toggle("select-arrow-active");
+                });
+            }
+            function closeAllSelect(elmnt) {
+                var x, y, i, xl, yl, arrNo = [];
+                x = document.getElementsByClassName("select-items");
+                y = document.getElementsByClassName("select-selected");
+                xl = x.length;
+                yl = y.length;
+                for (i = 0; i < yl; i++) {
+                    if (elmnt == y[i]) {
+                        arrNo.push(i)
+                    } else {
+                        y[i].classList.remove("select-arrow-active");
+                    }
+                }
+                for (i = 0; i < xl; i++) {
+                    if (arrNo.indexOf(i)) {
+                        x[i].classList.add("select-hide");
+                    }
+                }
+            }
+            /*if the user clicks anywhere outside the select box,
+            then close all select boxes:*/
+            document.addEventListener("click", closeAllSelect);
+            // user  type select script
+
+
+
+
+            $('#address-plus-icon').click(function (e) {
                 $('#address-modal').css('display', 'block');
             });
 
@@ -229,84 +239,53 @@
                 $('#address-modal').css('display', 'none');
             });
 
+            $('#address-save-icon').click(function (e) {
+                alert("سیو شد");
+            });
+
+            $('form#address-form').submit(function (e) {
+                e.preventDefault();
+                let countOfRows = document.getElementById('address-table').rows.length;
+                let currentRow = countOfRows++;
+                const form = $('form#address-form');
+                let formData = form.serializeArray();
+                $(`
+                    <tr>
+                        <td>${currentRow}</td>
+                        <td>${formData[0]['value']}</td>
+                        <td>${formData[1]['value']}</td>
+                        <td>${formData[2]['value']}</td>
+                        <td>${formData[3]['value']}</td>
+                        <td>${formData[4]['value']}</td>
+                        <td>${formData[5]['value']}</td>
+                        <td>${formData[6]['value']}</td>
+                        <td class="delete-icon-container" title="پاک کردن">
+                            <i class=" fas fa-trash delete-icon"></i>
+                        </td>
+                    </tr>
+                `).appendTo('table#address-table');
+                $('#address-modal').css('display', 'none');
+                // English numbers to Persian
+                traverse(document.body);
+            });
         });
 
 
-
-
-
-        // < !--user - type select script-- >
-        var x, i, j, l, ll, selElmnt, a, b, c;
-        x = document.getElementsByClassName("custom-select");
-        l = x.length;
-        for (i = 0; i < l; i++) {
-            selElmnt = x[i].getElementsByTagName("select")[0];
-            ll = selElmnt.length;
-            a = document.createElement("DIV");
-            a.setAttribute("class", "select-selected");
-            a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-            x[i].appendChild(a);
-            b = document.createElement("DIV");
-            b.setAttribute("class", "select-items select-hide");
-            for (j = 1; j < ll; j++) {
-                c = document.createElement("DIV");
-                c.innerHTML = selElmnt.options[j].innerHTML;
-                c.addEventListener("click", function (e) {
-                    var y, i, k, s, h, sl, yl;
-                    s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-                    sl = s.length;
-                    h = this.parentNode.previousSibling;
-                    for (i = 0; i < sl; i++) {
-                        if (s.options[i].innerHTML == this.innerHTML) {
-                            s.selectedIndex = i;
-                            h.innerHTML = this.innerHTML;
-                            y = this.parentNode.getElementsByClassName("same-as-selected");
-                            yl = y.length;
-                            for (k = 0; k < yl; k++) {
-                                y[k].removeAttribute("class");
-                            }
-                            this.setAttribute("class", "same-as-selected");
-                            break;
-                        }
-                    }
-                    h.click();
-                });
-                b.appendChild(c);
-            }
-            x[i].appendChild(b);
-            a.addEventListener("click", function (e) {
-                e.stopPropagation();
-                closeAllSelect(this);
-                this.nextSibling.classList.toggle("select-hide");
-                this.classList.toggle("select-arrow-active");
-            });
-        }
-        function closeAllSelect(elmnt) {
-            var x, y, i, xl, yl, arrNo = [];
-            x = document.getElementsByClassName("select-items");
-            y = document.getElementsByClassName("select-selected");
-            xl = x.length;
-            yl = y.length;
-            for (i = 0; i < yl; i++) {
-                if (elmnt == y[i]) {
-                    arrNo.push(i)
-                } else {
-                    y[i].classList.remove("select-arrow-active");
+        // convertion english numbers to persian
+        persian = { 0: '۰', 1: '۱', 2: '۲', 3: '۳', 4: '۴', 5: '۵', 6: '۶', 7: '۷', 8: '۸', 9: '۹' };
+        function traverse(el) {
+            if (el.nodeType == 3) {
+                var list = el.data.match(/[0-9]/g);
+                if (list != null && list.length != 0) {
+                    for (var i = 0; i < list.length; i++)
+                        el.data = el.data.replace(list[i], persian[list[i]]);
                 }
             }
-            for (i = 0; i < xl; i++) {
-                if (arrNo.indexOf(i)) {
-                    x[i].classList.add("select-hide");
-                }
+            for (var i = 0; i < el.childNodes.length; i++) {
+                traverse(el.childNodes[i]);
             }
         }
-        /*if the user clicks anywhere outside the select box,
-        then close all select boxes:*/
-        document.addEventListener("click", closeAllSelect);
-    // user  type select script
-
-
-
+        // convertion english numbers to persian
 
 
     </script>

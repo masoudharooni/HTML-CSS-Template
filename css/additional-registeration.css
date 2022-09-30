@@ -415,7 +415,6 @@ input[type=number]::-webkit-inner-spin-button {
     display:inline-block;
     float: right;
     padding: 10px;
-
 }
 
 .table-container .table-icon{
@@ -425,7 +424,15 @@ input[type=number]::-webkit-inner-spin-button {
     float: left;
     padding: 10px;
     cursor: pointer;
+    border-right: 3px solid #ECA400;
 }
+
+.table-container .table-icon i{
+    padding: 0 5px;
+}
+
+
+
 
 /* modal styles */
 
