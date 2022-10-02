@@ -100,6 +100,30 @@
 
         </div>
 
+        <div class="table-container">
+            <p class="table-title">فعالیت ها</p>
+            <span class="table-icon">
+                <i id="activities-save-icon" class="fas fa-floppy-disk" aria-hidden="true"></i>
+                <i id="activities-plus-icon" class="fas fa-plus"></i>
+            </span>
+
+            <table id="activities-table">
+                <tr>
+                    <th></th>
+                    <th>موضوع</th>
+                    <th>از سال</th>
+                    <th>تا سال</th>
+                    <th>نام رابط</th>
+                    <th>شماره تماس رابط</th>
+                    <th>شرح</th>
+                    <th></th>
+                </tr>
+
+
+            </table>
+
+        </div>
+
         <footer id="footer">
             <div class="table-container">
                 <div class="left-side">
@@ -375,24 +399,24 @@
                             <label for="accounts_number">
                                 <span> شماره حساب</span>
                             </label>
-                            <input id="accounts_number" class="input" name="accounts_number" type="number" placeholder="شماره حساب را وارد کنید"
-                                required>
+                            <input id="accounts_number" class="input" name="accounts_number" type="number"
+                                placeholder="شماره حساب را وارد کنید" required>
                         </div>
 
                         <div class="input-container">
                             <label for="sheba_code">
                                 <span> شماره شبا</span>
                             </label>
-                            <input id="sheba_code" class="input" name="sheba_code" type="number" placeholder="شماره شبا را وارد کنید"
-                                required>
+                            <input id="sheba_code" class="input" name="sheba_code" type="text"
+                                placeholder="شماره شبا را وارد کنید" required>
                         </div>
 
                         <div class="input-container">
                             <label for="description">
                                 <span> شرح</span>
                             </label>
-                            <input id="description" class="input" name="description" type="text" placeholder="شرح را وارد کنید"
-                                required>
+                            <input id="description" class="input" name="description" type="text"
+                                placeholder="شرح را وارد کنید" required>
                         </div>
 
                     </div>
@@ -409,6 +433,82 @@
         </div>
         <!-- accounts modal container -->
 
+        <!-- activities modal container -->
+        <div id="activities-modal" class="modal-container">
+            <div class="address-form-container">
+
+                <div class="modal-header">
+                    <p>فعالیت ها</p>
+                </div>
+
+                <form id="activities-form" action="" method="post">
+                    <div class="right-side">
+                        <div class="input-container">
+                            <label for="subject">
+                                <span> موضوع</span>
+                            </label>
+                            <input id="subject" class="input" name="subject" type="text"
+                                placeholder="عنوان را وارد کنید" required>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="of_year">
+                                <span> از سال</span>
+                            </label>
+                            <input id="of_year" class="input" name="of_year" type="number"
+                                placeholder="از چه سالی فعالیت میکنید؟" min="1000" max="9999" required>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="until_year">
+                                <span> تا سال</span>
+                            </label>
+                            <input id="until_year" class="input" name="until_year" type="number" min="1000" max="9999"
+                                placeholder="تا چه سالی فعالیت میکنید" required>
+                        </div>
+
+                    </div>
+
+                    <div class="left-side">
+                        <div class="input-container">
+                            <label for="connection_name">
+                                <span> نام رابط</span>
+                            </label>
+                            <input id="connection_name" class="input" name="connection_name" type="text"
+                                placeholder="نام رابط را وارد کنید" required>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="connection_phone_number">
+                                <span> شماره تماس رابط </span>
+                            </label>
+                            <input id="connection_phone_number" class="input" name="connection_phone_number"
+                                type="number" placeholder="شماره تماس رابط را وارد کنید" required>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="description">
+                                <span> شرح </span>
+                            </label>
+                            <input id="description" class="input" name="description"
+                                type="text" placeholder="شرح را وارد کنید" required>
+                        </div>
+
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="modal-footer">
+                        <div class="submit-container">
+                            <input id="address-cansell-btn" type="button" class="modal-btn cansell-btn" value="انصراف">
+                            <input id="addredss-submit-btn" type="submit" class="modal-btn address-submit"
+                                value="تایید">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- activities modal container -->
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
@@ -418,6 +518,7 @@
     <script src="./js/additional_registration/other_people_modal.js"></script>
     <script src="./js/additional_registration/address_modal.js"></script>
     <script src="./js/additional_registration/accounts_modal.js"></script>
+    <script src="./js/additional_registration/activities_modal.js"></script>
     <script src="./js/select_drop_down_script.js"></script>
     <script src="./js/persian_date_picker.js"></script>
 
