@@ -76,10 +76,34 @@
 
         </div>
 
+        <div class="table-container">
+            <p class="table-title">حساب ها</p>
+            <span class="table-icon">
+                <i id="accounts-save-icon" class="fas fa-floppy-disk" aria-hidden="true"></i>
+                <i id="accounts-plus-icon" class="fas fa-plus"></i>
+            </span>
+
+            <table id="accounts-table">
+                <tr>
+                    <th></th>
+                    <th>بانک</th>
+                    <th>شعبه</th>
+                    <th>شماره کارت</th>
+                    <th>شماره حساب</th>
+                    <th>شماره شبا</th>
+                    <th>شرح</th>
+                    <th></th>
+                </tr>
+
+
+            </table>
+
+        </div>
+
         <footer id="footer">
             <div class="table-container">
                 <div class="left-side">
-                    <input class="submit-btn" type="submit" value="ورود">
+                    <input class="submit-btn" type="submit" value="ثبت">
                 </div>
             </div>
         </footer>
@@ -305,7 +329,85 @@
         </div>
         <!-- other people modal container -->
 
+        <!-- accounts modal container -->
+        <div id="accounts-modal" class="modal-container">
+            <div class="address-form-container">
 
+                <div class="modal-header">
+                    <p>حساب ها</p>
+                </div>
+
+                <form id="accounts-form" action="" method="post">
+                    <div class="right-side">
+                        <div class="input-container">
+                            <label for="bank">
+                                <span>بانک</span>
+                            </label>
+                            <div class="custom-select">
+                                <select id="bank" name="bank" class="input" required>
+                                    <option value="بانک ملی">بانک ملی</option>
+                                    <option value="بانک سپه">بانک سپه</option>
+                                    <option value="بانک ملت">بانک ملت </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="branch">
+                                <span> شعبه</span>
+                            </label>
+                            <input id="branch" class="input" name="branch" type="text" placeholder="شعبه را وارد کنید"
+                                required>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="cart_code">
+                                <span> شماره کارت</span>
+                            </label>
+                            <input id="cart_code" class="input" name="cart_code" type="number"
+                                placeholder="شماره کارت را وارد کنید" required>
+                        </div>
+
+                    </div>
+
+                    <div class="left-side">
+                        <div class="input-container">
+                            <label for="accounts_number">
+                                <span> شماره حساب</span>
+                            </label>
+                            <input id="accounts_number" class="input" name="accounts_number" type="number" placeholder="شماره حساب را وارد کنید"
+                                required>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="sheba_code">
+                                <span> شماره شبا</span>
+                            </label>
+                            <input id="sheba_code" class="input" name="sheba_code" type="number" placeholder="شماره شبا را وارد کنید"
+                                required>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="description">
+                                <span> شرح</span>
+                            </label>
+                            <input id="description" class="input" name="description" type="text" placeholder="شرح را وارد کنید"
+                                required>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="modal-footer">
+                        <div class="submit-container">
+                            <input id="accounts-cansell-btn" type="button" class="modal-btn cansell-btn" value="انصراف">
+                            <input id="accounts-submit-btn" type="submit" class="modal-btn address-submit"
+                                value="تایید">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- accounts modal container -->
 
     </div>
 
@@ -315,6 +417,7 @@
     <script src="./plugin/Persian-Jalali-Calendar-Data-Picker-Plugin/dist/kamadatepicker.min.js"></script>
     <script src="./js/additional_registration/other_people_modal.js"></script>
     <script src="./js/additional_registration/address_modal.js"></script>
+    <script src="./js/additional_registration/accounts_modal.js"></script>
     <script src="./js/select_drop_down_script.js"></script>
     <script src="./js/persian_date_picker.js"></script>
 

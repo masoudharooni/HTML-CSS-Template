@@ -299,12 +299,17 @@
 .modal-footer {
     width: 100%;
     height: 60px;
-    position: sticky;
+    position: absolute;
     bottom: 0px;
     border-top: 3px solid #ECA400;
     background-color: #001D4A;
     text-align: center;
     border-radius: 0 0 20px 20px;
+}
+
+#other-people-modal .modal-footer{
+    position: sticky !important;
+    bottom: 0;
 }
 
 .modal-footer .address-submit {
