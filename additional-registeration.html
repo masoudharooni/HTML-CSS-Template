@@ -168,6 +168,28 @@
 
         </div>
 
+
+        <div class="table-container">
+            <p class="table-title">مستندات</p>
+            <span class="table-icon">
+                <i id="document-save-icon" class="fas fa-floppy-disk" aria-hidden="true"></i>
+                <i id="document-plus-icon" class="fas fa-plus"></i>
+            </span>
+
+            <table id="document-table">
+                <tr>
+                    <th></th>
+                    <th>عنوان</th>
+                    <th>نوع</th>
+                    <th>توضیحات</th>
+                    <th>آدرس</th>
+                    <th></th>
+                </tr>
+
+            </table>
+
+        </div>
+
         <footer id="footer">
             <div class="table-container">
                 <div class="left-side">
@@ -640,7 +662,7 @@
         </div>
         <!-- products modal container -->
 
-        <!-- activity area -->
+        <!-- activity area modal -->
         <div id="activity-area-modal" class="modal-container">
             <div class="address-form-container">
 
@@ -690,7 +712,68 @@
                 </form>
             </div>
         </div>
-        <!-- activity area -->
+        <!-- activity area modal -->
+
+
+        <!-- document modal -->
+        <div id="document-modal" class="modal-container">
+            <div class="address-form-container">
+
+                <div class="modal-header">
+                    <p>مستندات</p>
+                </div>
+
+                <form id="document-form" action="" method="post">
+                    <div class="right-side">
+                        <div class="input-container">
+                            <label for="title">
+                                <span> عنوان</span>
+                            </label>
+                            <input id="title" class="input" name="title" type="text" placeholder="عنوان را وارد کنید"
+                                required>
+                        </div>
+
+
+                        <div class="input-container">
+                            <label for="secondary_activity">
+                                <span> نوع</span>
+                            </label>
+                            <input id="secondary_activity" class="input" name="secondary_activity" type="text"
+                                placeholder="نوع مستند خود را وارد کنید" required>
+                        </div>
+
+                    </div>
+
+                    <div class="left-side">
+                        <div class="input-container">
+                            <label for="description">
+                                <span> توضیحات </span>
+                            </label>
+                            <input id="description" class="input" name="description" type="text"
+                                placeholder="توضیحات را وارد کنید" required>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="address">
+                                <span> آدرس </span>
+                            </label>
+                            <input id="address" class="input" name="address" type="text" placeholder="آدرس را وارد کنید"
+                                required>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="modal-footer">
+                        <div class="submit-container">
+                            <input id="document-cansell-btn" type="button" class="modal-btn cansell-btn" value="انصراف">
+                            <input id="document-submit-btn" type="submit" class="modal-btn address-submit"
+                                value="تایید">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- document modal -->
 
     </div>
 
@@ -703,7 +786,8 @@
     <script src="./js/additional_registration/accounts_modal.js"></script>
     <script src="./js/additional_registration/activities_modal.js"></script>
     <script src="./js/additional_registration/products_modal.js"></script>
-    <script src="./js//additional_registration/activity_area_modal.js"></script>
+    <script src="./js/additional_registration/activity_area_modal.js"></script>
+    <script src="./js/additional_registration/document_modal.js"></script>
     <script src="./js/select_drop_down_script.js"></script>
     <script src="./js/persian_date_picker.js"></script>
 
