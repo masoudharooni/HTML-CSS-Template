@@ -103,6 +103,8 @@
 
 /* header styles */
 #header {
+    position: sticky;
+    top: 0;
     width: 100%;
     padding: 30px 20px;
     margin-bottom: 30px;
@@ -128,24 +130,25 @@
 /* footer styles */
 #footer {
     width: 100%;
-    height: 75px;
-    position: fixed;
+    height: 50px;
+    position: sticky;
     bottom: 0;
     background-color: #27476E;
-    /* text-align: left; */
 }
 
 #footer .table-container {
     border: none;
+    position: relative;
 }
 
 #footer .left-side {
     text-align: left;
+    height: 100%; 
 }
 
 #footer .submit-btn {
     width: 50%;
-    padding: 5px 20px;
+    height: 50px;
     border-radius: 10px;
     border: 2px solid #ECA400;
     cursor: pointer;
@@ -307,7 +310,7 @@
     border-radius: 0 0 20px 20px;
 }
 
-#other-people-modal .modal-footer{
+#other-people-modal .modal-footer {
     position: sticky !important;
     bottom: 0;
 }

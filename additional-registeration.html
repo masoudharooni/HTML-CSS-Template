@@ -124,6 +124,30 @@
 
         </div>
 
+        <div class="table-container">
+            <p class="table-title">محصولات</p>
+            <span class="table-icon">
+                <i id="products-save-icon" class="fas fa-floppy-disk" aria-hidden="true"></i>
+                <i id="products-plus-icon" class="fas fa-plus"></i>
+            </span>
+
+            <table id="products-table">
+                <tr>
+                    <th></th>
+                    <th>عنوان</th>
+                    <th>گروه</th>
+                    <th>برند</th>
+                    <th>کالا</th>
+                    <th>نحوه تامین</th>
+                    <th>شرح</th>
+                    <th></th>
+                </tr>
+
+
+            </table>
+
+        </div>
+
         <footer id="footer">
             <div class="table-container">
                 <div class="left-side">
@@ -448,7 +472,7 @@
                                 <span> موضوع</span>
                             </label>
                             <input id="subject" class="input" name="subject" type="text"
-                                placeholder="عنوان را وارد کنید" required>
+                                placeholder="موضوع را وارد کنید" required>
                         </div>
 
                         <div class="input-container">
@@ -490,8 +514,8 @@
                             <label for="description">
                                 <span> شرح </span>
                             </label>
-                            <input id="description" class="input" name="description"
-                                type="text" placeholder="شرح را وارد کنید" required>
+                            <input id="description" class="input" name="description" type="text"
+                                placeholder="شرح را وارد کنید" required>
                         </div>
 
 
@@ -499,8 +523,9 @@
                     <div class="clearfix"></div>
                     <div class="modal-footer">
                         <div class="submit-container">
-                            <input id="address-cansell-btn" type="button" class="modal-btn cansell-btn" value="انصراف">
-                            <input id="addredss-submit-btn" type="submit" class="modal-btn address-submit"
+                            <input id="activities-cansell-btn" type="button" class="modal-btn cansell-btn"
+                                value="انصراف">
+                            <input id="activities-submit-btn" type="submit" class="modal-btn address-submit"
                                 value="تایید">
                         </div>
                     </div>
@@ -508,6 +533,92 @@
             </div>
         </div>
         <!-- activities modal container -->
+
+        <!-- products modal container -->
+        <div id="products-modal" class="modal-container">
+            <div class="address-form-container">
+
+                <div class="modal-header">
+                    <p>محصولات</p>
+                </div>
+
+                <form id="products-form" action="" method="post">
+                    <div class="right-side">
+                        <div class="input-container">
+                            <label for="title">
+                                <span> عنوان</span>
+                            </label>
+                            <input id="title" class="input" name="title" type="text" placeholder="عنوان را وارد کنید"
+                                required>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="group">
+                                <span>گروه</span>
+                            </label>
+                            <div class="custom-select">
+                                <select id="group" name="group" class="input" required>
+                                    <option value="گروه یک">گروه یک</option>
+                                    <option value="گروه دو">گروه دو</option>
+                                    <option value="گروه سه">گروه سه </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="brand">
+                                <span> برند</span>
+                            </label>
+                            <input id="brand" class="input" name="brand" type="text" placeholder="برند را وارد کنید"
+                                required>
+                        </div>
+
+                    </div>
+
+                    <div class="left-side">
+                        <div class="input-container">
+                            <label for="product">
+                                <span> نام کالا</span>
+                            </label>
+                            <input id="product" class="input" name="product" type="text"
+                                placeholder="نام کالا را وارد کنید" required>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="supplier">
+                                <span>تامین کننده</span>
+                            </label>
+                            <div class="custom-select">
+                                <select id="supplier" name="supplier" class="input" required>
+                                    <option value="داخلی">داخلی</option>
+                                    <option value="خارجی">خارجی</option>
+                                    <option value="هردو">هردو </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="description">
+                                <span> شرح </span>
+                            </label>
+                            <input id="description" class="input" name="description" type="text"
+                                placeholder="شرح را وارد کنید" required>
+                        </div>
+
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="modal-footer">
+                        <div class="submit-container">
+                            <input id="products-cansell-btn" type="button" class="modal-btn cansell-btn" value="انصراف">
+                            <input id="products-submit-btn" type="submit" class="modal-btn address-submit"
+                                value="تایید">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- products modal container -->
 
     </div>
 
@@ -519,6 +630,7 @@
     <script src="./js/additional_registration/address_modal.js"></script>
     <script src="./js/additional_registration/accounts_modal.js"></script>
     <script src="./js/additional_registration/activities_modal.js"></script>
+    <script src="./js/additional_registration/products_modal.js"></script>
     <script src="./js/select_drop_down_script.js"></script>
     <script src="./js/persian_date_picker.js"></script>
 
