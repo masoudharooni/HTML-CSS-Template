@@ -24,7 +24,19 @@
             </div>
         </header>
 
-        <div class="table-container">
+        <div id="tabs" class="tab-container">
+            <ul>
+                <li id="address-table">آدرس</li>
+                <li id="other-people-table">افراد مرتبط</li>
+                <li id="accounts-table">حساب ها</li>
+                <li id="activities-table">فعالیت ها</li>
+                <li id="products-table">محصولات</li>
+                <li id="activity-area-table">حوزه فعالیت</li>
+                <li id="documents-table">مستندات</li>
+            </ul>
+        </div>
+
+        <div id="address_table_container" class="table-container">
             <p class="table-title">آدرس</p>
             <span class="table-icon">
                 <i id="address-save-icon" class="fas fa-floppy-disk" aria-hidden="true"></i>
@@ -49,7 +61,7 @@
 
         </div>
 
-        <div class="table-container">
+        <div id="other_people_table_container" class="table-container">
             <p class="table-title">افراد مرتبط</p>
             <span class="table-icon">
                 <i id="other-people-save-icon" class="fas fa-floppy-disk" aria-hidden="true"></i>
@@ -76,7 +88,7 @@
 
         </div>
 
-        <div class="table-container">
+        <div id="accounts_table_container" class="table-container">
             <p class="table-title">حساب ها</p>
             <span class="table-icon">
                 <i id="accounts-save-icon" class="fas fa-floppy-disk" aria-hidden="true"></i>
@@ -100,7 +112,7 @@
 
         </div>
 
-        <div class="table-container">
+        <div id="activities_table_container" class="table-container">
             <p class="table-title">فعالیت ها</p>
             <span class="table-icon">
                 <i id="activities-save-icon" class="fas fa-floppy-disk" aria-hidden="true"></i>
@@ -124,7 +136,7 @@
 
         </div>
 
-        <div class="table-container">
+        <div id="products_table_container" class="table-container">
             <p class="table-title">محصولات</p>
             <span class="table-icon">
                 <i id="products-save-icon" class="fas fa-floppy-disk" aria-hidden="true"></i>
@@ -148,7 +160,7 @@
 
         </div>
 
-        <div class="table-container">
+        <div id="activity_area_table_container" class="table-container">
             <p class="table-title">حوزه فعالیت</p>
             <span class="table-icon">
                 <i id="activity-area-save-icon" class="fas fa-floppy-disk" aria-hidden="true"></i>
@@ -169,7 +181,7 @@
         </div>
 
 
-        <div class="table-container">
+        <div id="document_table_container" class="table-container">
             <p class="table-title">مستندات</p>
             <span class="table-icon">
                 <i id="document-save-icon" class="fas fa-floppy-disk" aria-hidden="true"></i>
@@ -191,14 +203,12 @@
         </div>
 
         <footer id="footer">
-            <div class="table-container">
+            <div class="footer-button-container">
                 <div class="left-side">
                     <input class="submit-btn" type="submit" value="ثبت">
                 </div>
             </div>
         </footer>
-
-
 
         <!-- address modal container -->
         <div id="address-modal" class="modal-container">
@@ -285,8 +295,6 @@
             </div>
         </div>
         <!-- address modal container -->
-
-
 
         <!-- other people modal container -->
         <div id="other-people-modal" class="modal-container">
@@ -714,7 +722,6 @@
         </div>
         <!-- activity area modal -->
 
-
         <!-- document modal -->
         <div id="document-modal" class="modal-container">
             <div class="address-form-container">
@@ -788,6 +795,7 @@
     <script src="./js/additional_registration/products_modal.js"></script>
     <script src="./js/additional_registration/activity_area_modal.js"></script>
     <script src="./js/additional_registration/document_modal.js"></script>
+    <script src="./js/additional_registration/tabs.js"></script>
     <script src="./js/select_drop_down_script.js"></script>
     <script src="./js/persian_date_picker.js"></script>
 

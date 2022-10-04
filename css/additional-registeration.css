@@ -136,14 +136,14 @@
     background-color: #27476E;
 }
 
-#footer .table-container {
+#footer .footer-button-container {
     border: none;
     position: relative;
 }
 
 #footer .left-side {
     text-align: left;
-    height: 100%; 
+    height: 100%;
 }
 
 #footer .submit-btn {
@@ -337,10 +337,14 @@
     margin: auto;
 }
 
-.container .table-container {
+.container .table-container, .footer-button-container,.tab-container {
     border: 3px solid #ECA400;
     width: 80%;
     margin: 20px auto;
+}
+
+.table-container{
+    display: none;
 }
 
 .table-container .table-title {
@@ -365,8 +369,35 @@
     padding: 0 5px;
 }
 
+#tabs {
+    background-color: #001D4A;
+    height: 50px;
+    color: #EAF8BF;
+    position: relative;
+}
 
+#tabs ul {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+}
 
+#tabs ul li {
+    float: right;
+    padding: 15px 20px;
+}
+
+#tabs ul li:hover {
+    cursor: pointer;
+    background-color: rgba(0, 44, 110, 0.577);
+}
 
 /* modal styles */
 
