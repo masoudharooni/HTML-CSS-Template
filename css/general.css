@@ -41,6 +41,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 body {
     font-family: 'SGKara';
     direction: rtl;
+    background: rgb(0, 29, 74);
+    background: linear-gradient(90deg, rgba(0, 29, 74, 1) 0%, rgba(30, 56, 97, 1) 50%, rgba(0, 29, 74, 1) 100%);
 }
 
 * {
@@ -73,6 +75,4 @@ input[type=number]::-webkit-inner-spin-button {
 .container {
     width: 100%;
     height: 100%;
-    background: rgb(0, 29, 74);
-    background: linear-gradient(90deg, rgba(0, 29, 74, 1) 0%, rgba(30, 56, 97, 1) 50%, rgba(0, 29, 74, 1) 100%);
 }

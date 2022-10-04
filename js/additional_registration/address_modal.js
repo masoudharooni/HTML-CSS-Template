@@ -15,6 +15,7 @@ $(document).ready(function () {
     });
 
     $('form#address-form').submit(function (e) {
+        // alert('salam');
         e.preventDefault();
         let countOfRows = document.getElementById('address-table').rows.length;
         let currentRow = countOfRows++;

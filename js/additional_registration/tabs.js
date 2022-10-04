@@ -8,31 +8,31 @@ $(document).ready(function () {
         activity_area_table: 0,
         document_table: 0,
     };
-    $('li#address-table').click(function (e) {
+    $('li#address-table-tab').click(function (e) {
         setValueToTableKeys('address_table');
         visibleSelectedTable();
     });
-    $('li#other-people-table').click(function (e) {
+    $('li#other-people-table-tab').click(function (e) {
         setValueToTableKeys('other_people_table');
         visibleSelectedTable();
     });
-    $('li#accounts-table').click(function (e) {
+    $('li#accounts-table-tab').click(function (e) {
         setValueToTableKeys('accounts_table');
         visibleSelectedTable();
     });
-    $('li#activities-table').click(function (e) {
+    $('li#activities-table-tab').click(function (e) {
         setValueToTableKeys('activities_table');
         visibleSelectedTable();
     });
-    $('li#products-table').click(function (e) {
+    $('li#products-table-tab').click(function (e) {
         setValueToTableKeys('products_table');
         visibleSelectedTable();
     });
-    $('li#activity-area-table').click(function (e) {
+    $('li#activity-area-table-tab').click(function (e) {
         setValueToTableKeys('activity_area_table');
         visibleSelectedTable();
     });
-    $('li#documents-table').click(function (e) {
+    $('li#documents-table-tab').click(function (e) {
         setValueToTableKeys('document_table');
         visibleSelectedTable();
     });
@@ -48,7 +48,6 @@ $(document).ready(function () {
     }
 
     function setValueToTableKeys(expectedTable) {
-        // alert(expectedTable);
         for (let j in tableVisibility) {
             tableVisibility[j] = 0;
             if (j === expectedTable) {
