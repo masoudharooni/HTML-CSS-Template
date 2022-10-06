@@ -1,0 +1,55 @@
+/* Responsive styles */
+/* smart phones */
+@media screen and (max-width:576px) {
+    .container .right-side {
+        width: 100%;
+    }
+
+    .container .right-side .form-container {
+        width: 80%;
+    }
+
+    .container .right-side .input-container {
+        width: 200px;
+    }
+
+    .message-container .rainbow {
+        width: 40%;
+    }
+
+    .container .left-side {
+        width: 100%;
+        display: none;
+    }
+
+    #seperator {
+        display: none;
+    }
+}
+
+/* smart phones */
+
+/* tablets */
+@media screen and (max-width:768px) {
+    .container .right-side {
+        width: 100%;
+    }
+
+    .container .right-side .form-container {
+        width: 80%;
+    }
+
+    #seperator {
+        display: none;
+    }
+
+    .container .left-side {
+        width: 100%;
+        display: none;
+    }
+}
+
+/* tablets */
+
+
+/* Responsive styles */
