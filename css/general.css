@@ -42,7 +42,6 @@ body {
     font-family: 'SGKara';
     direction: rtl;
     background: rgb(0, 29, 74);
-    background: linear-gradient(90deg, rgba(0, 29, 74, 1) 0%, rgba(30, 56, 97, 1) 50%, rgba(0, 29, 74, 1) 100%);
 }
 
 * {
@@ -78,6 +77,4 @@ input[type=number]::-webkit-inner-spin-button {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background: rgb(0, 29, 74);
-    background: linear-gradient(90deg, rgba(0, 29, 74, 1) 0%, rgba(30, 56, 97, 1) 50%, rgba(0, 29, 74, 1) 100%);
 }

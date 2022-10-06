@@ -88,7 +88,7 @@
     float: left;
     color: #001D4A;
 }
-    
+
 .custom-select select {
     display: none;
 }
@@ -193,5 +193,40 @@
 }
 
 /* footer styles */
+
+
+/* responsive */
+
+@media screen and (max-width:768px) {
+    .right-side {
+        width: 50%;
+    }
+    .center-side {
+        width: 50%;
+    }
+    .left-side {
+        width: 50%;
+        float:right;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .right-side {
+        width: 100%;
+    }
+    .center-side {
+        width: 100%;
+    }
+    .left-side {
+        width: 100%;
+    }
+    #footer{
+        position: sticky;
+        bottom: 0;
+    }
+}
+
+/* responsive */
+
 
 /* styles */
