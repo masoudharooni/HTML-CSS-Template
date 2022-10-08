@@ -22,33 +22,43 @@
         </header>
 
 
-        <!-- 
+
         <div class="real">
             <form action="./additional-registeration.html" method="post">
                 <div class="right-side">
-
+                    <div class="input-container">
+                        <label for="company_type">
+                            <span>ماهیت </span>
+                        </label>
+                        <div class="custom-select">
+                            <select id="company_type" class="input">
+                                <option value="1">حقوقی</option>
+                                <option value="2">حقیقی</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="input-container">
                         <label for="name">
-                            <span>نام: </span>
+                            <span>نام </span>
                         </label>
                         <input id="name" class="input" type="text" placeholder="نام خود را وارد کنید">
                     </div>
 
                     <div class="input-container">
                         <label for="date_of_birthday">
-                            <span>تاریخ تولد: </span>
+                            <span>تاریخ تولد </span>
                         </label>
                         <input id="date_of_birthday" class="input">
                     </div>
                     <div class="input-container">
                         <label for="passport_number">
-                            <span>شماره پاسپورت: (ویژه افراد خارجی)</span>
+                            <span>شماره پاسپورت (ویژه افراد خارجی)</span>
                         </label>
                         <input id="passport_number" class="input" type="text" placeholder="شماره پاسپورت را وارد کنید">
                     </div>
                     <div class="input-container">
                         <label for="education">
-                            <span>تحصیلات :</span>
+                            <span>تحصیلات </span>
                         </label>
                         <div class="custom-select">
                             <select id="education" class="input">
@@ -65,28 +75,28 @@
 
                     <div class="input-container">
                         <label for="family_name">
-                            <span> نام خانوادگی: </span>
+                            <span> نام خانوادگی </span>
                         </label>
                         <input id="family_name" class="input" type="text" placeholder="نام خانوادگی خود را وارد کنید">
                     </div>
 
                     <div class="input-container">
                         <label for="id_number">
-                            <span> شماره شناسنامه: </span>
+                            <span> شماره شناسنامه </span>
                         </label>
                         <input id="id_number" class="input" type="text" placeholder="شماره شناسنامه خود را وارد کنید">
                     </div>
 
                     <div class="input-container">
                         <label for="job">
-                            <span> شغل: </span>
+                            <span> شغل </span>
                         </label>
                         <input id="job" class="input" type="text" placeholder="شغل خود را وارد کنید">
                     </div>
 
                     <div class="input-container">
                         <label for="email">
-                            <span> پست الکترونیک: </span>
+                            <span> پست الکترونیک </span>
                         </label>
                         <input id="email" class="input" type="email" placeholder="پست الکترونیک خود را وارد کنید">
                     </div>
@@ -95,22 +105,33 @@
 
                 <div class="left-side">
                     <div class="input-container">
+                        <label for="company_type">
+                            <span>نوع متقاضی </span>
+                        </label>
+                        <div class="custom-select">
+                            <select id="company_type" class="input">
+                                <option value="1">حقوقی</option>
+                                <option value="2">حقیقی</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-container">
                         <label for="father_name">
-                            <span> نام پدر: </span>
+                            <span> نام پدر </span>
                         </label>
                         <input id="father_name" class="input" type="text" placeholder="نام پدر خود را وارد کنید">
                     </div>
 
                     <div class="input-container">
                         <label for="national_code">
-                            <span> کد ملی: </span>
+                            <span> کد ملی </span>
                         </label>
                         <input id="national_code" class="input" type="number" placeholder="کدملی خود را وارد کنید">
                     </div>
 
                     <div class="input-container">
                         <label for="phone_number">
-                            <span> شماره تلفن همراه: </span>
+                            <span> شماره تلفن همراه </span>
                         </label>
                         <input id="phone_number" class="input" type="tel"
                             placeholder="شماره تلفن همراه خود را وارد کنید">
@@ -127,21 +148,32 @@
                     </footer>
                 </div>
             </form>
-        </div> -->
+        </div>
 
-        <div class="legal">
+        <!-- <div class="legal">
             <form action="./additional-registeration.html" method="post">
                 <div class="right-side">
                     <div class="input-container">
+                        <label for="company_type">
+                            <span>ماهیت </span>
+                        </label>
+                        <div class="custom-select">
+                            <select id="company_type" class="input">
+                                <option value="1">حقوقی</option>
+                                <option value="2">حقیقی</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-container">
                         <label for="company_name">
-                            <span> نام شرکت: </span>
+                            <span> نام شرکت </span>
                         </label>
                         <input id="company_name" class="input" type="text" placeholder="نام شرکت خود را وارد کنید">
                     </div>
 
                     <div class="input-container">
                         <label for="company_type">
-                            <span>نوع شرکت :</span>
+                            <span>نوع شرکت </span>
                         </label>
                         <div class="custom-select">
                             <select id="company_type" class="input">
@@ -153,7 +185,7 @@
 
                     <div class="input-container">
                         <label for="second_email">
-                            <span> پست الکترونیک: </span>
+                            <span> پست الکترونیک </span>
                         </label>
                         <input id="second_email" class="input" type="email"
                             placeholder="پست الکترونیک خود را وارد کنید">
@@ -161,7 +193,7 @@
 
                     <div class="input-container">
                         <label for="date_of_registration">
-                            <span>تاریخ ثبت: </span>
+                            <span>تاریخ ثبت </span>
                         </label>
                         <input id="date_of_registration" class="input">
                     </div>
@@ -171,7 +203,7 @@
                 <div class="center-side">
                     <div class="input-container">
                         <label for="national_company_code">
-                            <span> شناسه ملی شرکت: </span>
+                            <span> شناسه ملی شرکت </span>
                         </label>
                         <input id="national_company_code" class="input" type="number"
                             placeholder="شناسه ملی شرکت خود را وارد کنید">
@@ -180,7 +212,7 @@
 
                     <div class="input-container">
                         <label for="type_of_activation">
-                            <span> نوع فعالیت: </span>
+                            <span> نوع فعالیت </span>
                         </label>
                         <input id="type_of_activation" class="input" type="text"
                             placeholder="نوع فعالیت خود را وارد کنید">
@@ -190,7 +222,7 @@
 
                     <div class="input-container">
                         <label for="landing_number">
-                            <span> شماره تلفن: </span>
+                            <span> شماره تلفن </span>
                         </label>
                         <input id="landing_number" class="input" type="number"
                             placeholder="شماره تلفن خود را وارد کنید">
@@ -200,7 +232,7 @@
 
                     <div class="input-container">
                         <label for="phone_number">
-                            <span> شماره تلفن همراه: </span>
+                            <span> شماره تلفن همراه </span>
                         </label>
                         <input id="phone_number" class="input" type="number"
                             placeholder="شماره تلفن همراه خود را وارد کنید">
@@ -208,17 +240,27 @@
                 </div>
 
                 <div class="left-side">
-
+                    <div class="input-container">
+                        <label for="company_type">
+                            <span>نوع متقاضی </span>
+                        </label>
+                        <div class="custom-select">
+                            <select id="company_type" class="input">
+                                <option value="1">حقوقی</option>
+                                <option value="2">حقیقی</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="input-container">
                         <label for="economic_code">
-                            <span> کد اقتصادی: </span>
+                            <span> کد اقتصادی </span>
                         </label>
                         <input id="economic_code" class="input" type="number" placeholder="کد اقتصادی خود را وارد کنید">
                     </div>
 
                     <div class="input-container">
                         <label for="registration_number">
-                            <span> شماره ثبت: </span>
+                            <span> شماره ثبت </span>
                         </label>
                         <input id="registration_number" class="input" type="number"
                             placeholder="شماره ثبت  را وارد کنید">
@@ -226,7 +268,7 @@
 
                     <div class="input-container">
                         <label for="registration_number">
-                            <span> وبت سایت: </span>
+                            <span> وبت سایت </span>
                         </label>
                         <input id="registration_number" class="input" type="text" placeholder="وبت سایت  را وارد کنید">
                     </div>
@@ -244,7 +286,7 @@
                 </div>
 
             </form>
-        </div>
+        </div> -->
 
     </div>
 
