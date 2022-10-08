@@ -337,13 +337,13 @@
     margin: auto;
 }
 
-.container .table-container, .footer-button-container,.tab-container {
+.container .table-container, .footer-button-container, .tab-container {
     border: 3px solid #ECA400;
     width: 80%;
     margin: 20px auto;
 }
 
-.table-container{
+.table-container {
     display: none;
 }
 
@@ -399,7 +399,49 @@
     background-color: rgba(0, 44, 110, 0.577);
 }
 
+#tab-button {
+    height: 33px;
+    position: relative;
+    cursor: pointer;
+}
+#tab-button:hover {
+    background-color: rgba(0, 44, 110, 0.577);
+}
+
+#tab-button span {
+    width: 50px;
+    height: 2px;
+    display: block;
+    background-color: #ECA400;
+    margin: 5px auto;
+}
+
 /* modal styles */
+
+/* responsive */
+
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width:576px) {
+
+
+    #tabs {
+        /* display: none; */
+        height: 150px;
+    }
+
+    #tabs ul {
+        position: relative;
+        height: 100%;
+    }
+
+    #tabs ul li {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* responsive */
 
 
 /* styles */
