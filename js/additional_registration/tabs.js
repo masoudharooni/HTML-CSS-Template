@@ -56,4 +56,15 @@ $(document).ready(function () {
         }
     }
 
+    // responsive menue
+    $('#tab-button').click(function (e) {
+        e.preventDefault();
+        let tabsDisplay = $('#tabs').css('display');
+        if (tabsDisplay == 'none') {
+            $('#tabs').show();
+        } else {
+            $('#tabs').hide();
+        }
+    });
+
 });

@@ -316,7 +316,7 @@
 }
 
 .modal-footer .address-submit {
-    width: 60%;
+    width: 55%;
     margin: 0 0 0 17px;
     float: left;
 }
@@ -345,6 +345,7 @@
 
 .table-container {
     display: none;
+    overflow-x: scroll;
 }
 
 .table-container .table-title {
@@ -403,7 +404,9 @@
     height: 33px;
     position: relative;
     cursor: pointer;
+    display: none;
 }
+
 #tab-button:hover {
     background-color: rgba(0, 44, 110, 0.577);
 }
@@ -420,13 +423,42 @@
 
 /* responsive */
 
-@media screen and (max-width:768px) {}
+@media screen and (max-width:768px) {
+    .modal-container .address-form-container {
+        width: 70%;
+    }
 
-@media screen and (max-width:576px) {
-
+    #tab-button {
+        display: block;
+    }
 
     #tabs {
-        /* display: none; */
+        display: none;
+        height: 150px;
+    }
+
+    #tabs ul {
+        position: relative;
+        height: 100%;
+    }
+
+    #tabs ul li {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .modal-container .address-form-container {
+        width: 100%;
+    }
+
+    #tab-button {
+        display: block;
+    }
+
+    #tabs {
+        display: none;
         height: 150px;
     }
 
